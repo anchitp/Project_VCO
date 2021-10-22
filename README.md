@@ -10,30 +10,49 @@ A high-performance, separately driven, noise cancelling, skew-based Voltage Cont
 7. Simulation Results
 8. References
 
+
 ## Block Diagram
 |**(a) A general skew based voltage controlled oscillator (VCO)**| **(b) A pre-charge discharge skew based delay cell**|
 |---          |----          |
 |![Block_A](https://efabless-user-uploads.s3.amazonaws.com/b153caf6-93d1-4ab1-95e5-199154acbaeb/imagetools1.png)|![Block_B](https://efabless-user-uploads.s3.amazonaws.com/84a093ae-cc7d-417b-a016-a9d5fd9a9264/imagetools0.png)|
+
 
 ## Circuit Diagram
 |**(c) Connection mechanism for the design of 5-stage NSO based voltage controlled ring oscillator**|
 |---          |
 |![Block_C](https://efabless-user-uploads.s3.amazonaws.com/9d47ca89-63a9-4757-823e-935e5ccd27af/imagetools0.png)|
 
+
 ## Project Description
 Modern communication systems are evolving continuously and increasing exponentially and require high-performance and low-noise oscillators within the allowed power budget. Oscillators are critical components of communication systems and processors since they ensure that all data flows are accurately synchronized and/or modulated. Therefore, a high-performance (with an oscillation frequency equivalent to a 3-stage conventional RO (CRO)) oscillator equipped with noise suppression, wide tuning range, and asymmetric/symmetric load/driver skew-based VCRO is proposed for the first time. This architecture is a potential candidate to provide possible solutions for some frequently encountered design issues in oscillator design. It also serves as a preferable candidate for the design of a VCO-based ADC, especially when a large number of RO  stages are required. The proposed design not only ensures an oscillation frequency equivalent to that of a 3-stage CRO but also ensures a large number of stages in the design. Also, it can be employed in generating multiphase signals through injection locking techniques/frequency synthesizers.  
 
 The VCO delay-cell stage is a combination of a skew-based inverter proposed in [1]  and additionally designed top/bottom drive circuits to achieve symmetrical variation in output transitions, as shown in Fig. (a). It consists of 3 main sub-blocks:
 
-1) **Block A**: Biasing Circuit, consisting of diode-connected transistors (MP_CB, MN_CB)
+1) **Block A**: Biasing Circuit, consisting of diode-connected transistors (M<sub>P_CB</sub>, M<sub>N_CB</sub>)
 
-2) **Block B**: Delay Cell core, consisting of a top drive (M11, M12), a bottom drive (M21, M22), and the skew-based inverter core (MP, MN)
+2) **Block B**: Delay Cell core, consisting of a top drive (M<sub>11</sub>, M<sub>12</sub>), a bottom drive (M<sub>21</sub>, M<sub>22</sub>), and the skew-based inverter core (M<sub>P</sub>, M<sub>N</sub>)
 
-3) **Block C**: Level Shifter, basically, a Common Source Amplifier consisting of (MP­­_LS, MN_LS)
+3) **Block C**: Level Shifter, basically, a Common Source Amplifier consisting of (M<sub>P_LS</sub>, M<sub>N_LS</sub>)
 
-The control voltage signal (Vcontrol) is provided to the NMOS transistor, which drives the output falling transition (M12), while a signal of (Vdd – Vcontrol) is provided to the PMOS transistor, which drives the output rising transition (M22), with a Common Source Amplifier (CSA) to map the signal Vcontrol to (Vdd – Vcontrol). The transistors M11 and M21 are based at fixed drain currents IP_FIX and IN_FIX by appropriately sizing diode-connected transistors MP_CB and MN_CB, respectively. A  variation in Vcontrol results in a variation in the transistor currents IN_Cont and IP_Cont, which alters the discharging/charging rate of the total output capacitance (CP+CL). This is the essence of the frequency control mechanism for our design, similar to the one in [3]. The core delay cell (Block B) can be replaced by Blocks equipped with Pre-charge(PC)/Pre-discharge(PD) transistors (MPC/MPD) through feedforward techniques for symmetric output transitions, as shown in [2]. Additionally, fine-tune transistors MP_FT and MN_FT are introduced in series with the PC/PD transistors to exercise control over the base output rise/fall transition times and the voltage sensitivity by adjusting another control input VFINE_TUNE, as shown in Fig. (b).
+The control voltage signal (V<sub>control</sub>) is provided to the NMOS transistor, which drives the output falling transition (M<sub>12</sub>), while a signal of (V<sub>dd</sub> – V<sub>control</sub>) is provided to the PMOS transistor, which drives the output rising transition (M<sub>22</sub>), with a Common Source Amplifier (CSA) to map the signal Vcontrol to (V<sub>dd</sub> – V<sub>control</sub>). The transistors M<sub>11</sub> and M<sub>21</sub> are based at fixed drain currents I<sub>P_FIX</sub> and I<sub>N_FIX</sub> by appropriately sizing diode-connected transistors M<sub>P_CB</sub> and M<sub>N_CB</sub>, respectively. A  variation in Vcontrol results in a variation in the transistor currents I<sub>N_Cont</sub> and I<sub>P_Cont</sub>, which alters the discharging/charging rate of the total output capacitance (C<sub>P</sub>+C<sub>L</sub>). This is the essence of the frequency control mechanism for our design, similar to the one in [3]. The core delay cell (Block B) can be replaced by Blocks equipped with Pre-charge (PC)/Pre-discharge (PD) transistors (M<sub>PC</sub>/M<sub>PD</sub>) through feedforward techniques for symmetric output transitions, as shown in [2]. Additionally, fine-tune transistors M<sub>P_FT</sub> and M<sub>N_FT</sub> are introduced in series with the PC/PD transistors to exercise control over the base output rise/fall transition times and the voltage sensitivity by adjusting another control input V<sub>FINE_TUNE</sub>, as shown in Fig. (b).
 
 The individual single-ended delay cells outputs and inputs are connected to each other to form NSO/PSO architectures, resulting in (3N-1)/(3N+1) number of VCRO stages, as shown in Fig. (c). As explained in [1], N 3-stage coupled oscillator loops function out of phase to produce a sustained switching output waveform, oscillating at a frequency nearly equal to the one generated by a 3-stage CRO.    
 
-The proposed VCO architecture exhibits a fixed phase noise profile for a specific offset frequency, even when Vcontrol is varied across a significant portion of its tuning range. This property is not delayed cell-dependent and is valid for any input skew, even when the skew is reduced to 0. Considering a case when Vcont is given directly to M12 and fed through a CSA for M22,  phase noise remains fixed with Vcontrol till it rises up to a critical value (Vcritical), for an output frequency fcritical. The phase noise at the output is suppressed primarily because of strong attenuation at voltages below the critical control signal and corresponding frequencies higher than fcritical. At frequencies lower than the critical frequency, however, the magnitude of the delay cell shaping function allows phase noise at the input to appear at a delay cell's output with minimal attenuation, resulting in a noticeable spike in phase noise, as shown in Fig. (d)
+The proposed VCO architecture exhibits a fixed phase noise profile for a specific offset frequency, even when V<sub>control</sub> is varied across a significant portion of its tuning range. This property is not delayed cell-dependent and is valid for any input skew, even when the skew is reduced to 0. Considering a case when Vcont is given directly to M<sub>12</sub> and fed through a CSA for M<sub>22</sub>, phase noise remains fixed with V<sub>control</sub> till it rises up to a critical value (V<sub>critical</sub>), for an output frequency f<sub>critical</sub>. The phase noise at the output is suppressed primarily because of strong attenuation at voltages below the critical control signal and corresponding frequencies higher than f<sub>critical</sub>. At frequencies lower than the critical frequency, however, the magnitude of the delay cell shaping function allows phase noise at the input to appear at a delay cell's output with minimal attenuation, resulting in a noticeable spike in phase noise.
+
+## Design Specifications
+
+|Parameters|Intended|Achieved (post-simulation)<sup>*</sup>|
+|------------------| -----|---------------------------|
+|Tuning Range (GHz)|3|2.36395|
+|Center Frequency (GHz)|4|1.366025|
+|Area (mm<sup>2</sup>)|<0.01|0.004570|
+|Supply Voltage|1.8|1.8|
+
+<sup>*</sup>Obtained after extracting parasitic capacitances and resistances
+
+## Schematic Diagrams
+**5-Stage NSO with Pre-Discharge (PD)**
+![Sch_1]()
+
 
