@@ -51,8 +51,23 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 
 <sup>*</sup>Obtained after extracting parasitic capacitances and resistances
 
-## Schematic Diagrams
+## Schematic Diagram
 **5-Stage NSO with Pre-Discharge (PD)**
-![Sch_1]()
+![Sch_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Schematic.png)
+
+## Layout
+![Layout_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Layout.png)
+
+## Simulation Results
+### Pre-Layout
+#### Output Voltage (CLK)
+![Out_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Out.png)
+
+#### Frequency vs Control Voltage
+![Freq_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Freq.png)
+
+
+
+
 
 
