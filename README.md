@@ -73,4 +73,6 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 #### Oscillation Frequency vs Control Voltage
 ![Freq_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Freq.png)
 
+## References
+
 
