@@ -60,14 +60,17 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 
 ## Simulation Results
 ### Pre-Layout
-#### Output Voltage (CLK)
+#### Output Voltage
 ![Out_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Out.png)
 
-#### Frequency vs Control Voltage
+#### Oscillation Frequency vs Control Voltage
 ![Freq_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Freq.png)
 
+### Post-Layout
+#### Output Voltage
+![Out_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Out.png)
 
-
-
+#### Oscillation Frequency vs Control Voltage
+![Freq_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Freq.png)
 
 
