@@ -1,5 +1,5 @@
-# Project_VCO
-A high-performance, separately driven, noise cancelling, skew-based Voltage Controlled Ring-Oscillator designed in the SKY130 Process (An SSCS PICO Project).
+# Project_VCO (An SSCS PICO Project)
+A high-performance, separately driven, noise cancelling, skew-based Voltage Controlled Ring-Oscillator designed in the SKY130 Process.
 ## Table of Contents
 1. Block Diagram
 2. Circuit Diagram
