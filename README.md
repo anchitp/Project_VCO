@@ -56,7 +56,7 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 ![Sch_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Schematic.png)
 
 ## Layout
-####(Excluding the buffer design for measurements)
+#### (Excluding the buffer design for measurements)
 ![Layout_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Layout.png)
 
 
