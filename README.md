@@ -73,7 +73,7 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 ![Out_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Out.png)
 
 #### Oscillation Frequency vs Control Voltage
-![Freq_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Freq.png)
+![Freq_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Freq_1.png)
 
 ## References
 [1] N. Mishra et al., "Design and Realization of High-Speed Low-Noise Multi-Loop Skew-Based ROs Optimized for Even/Odd  Multi-Phase Signals," IEEE Trans. Circuits Syst. II: Express Briefs, vol. 67, no. 11, pp. 2352-2356, Nov. 2020".<br/><br/>
