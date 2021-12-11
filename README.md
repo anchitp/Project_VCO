@@ -56,9 +56,8 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 ![Sch_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Schematic.png)
 
 ## Layout
-#### (Excluding the buffer design for measurements)
-![Layout_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Layout.png)
-
+![Layout_1](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/Layout.jpg)
+![Buff_Layout](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/Buffer_Layout.jpg)
 
 ## Simulation Results
 ### Pre-Layout
@@ -70,16 +69,12 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 
 ### Post-Layout
 #### Output Voltage
-![Out_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Out.png)
+![Out_2](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/PostLayout_Outputs.jpg)
 
 #### Oscillation Frequency vs Control Voltage
-![Freq_2](https://github.com/anchitp/Project_VCO/blob/main/Plots/Post_Layout_Freq_1.png)
+![Freq_2](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/PostLayout_Linearity.jpg)
 
 ## References
 [1] N. Mishra et al., "Design and Realization of High-Speed Low-Noise Multi-Loop Skew-Based ROs Optimized for Even/Odd  Multi-Phase Signals," IEEE Trans. Circuits Syst. II: Express Briefs, vol. 67, no. 11, pp. 2352-2356, Nov. 2020".<br/><br/>
 [2] N. Mishra et al., "Delay Modulation in Separately Driven Delay Cells Utilized for the Generation of High-Performance Multiphase Signals Using ROs," in IEEE Transactions on Circuits and Systems II: Express Briefs, doi: 10.1109/TCSII.2021.3081829.<br/><br/>
 [3] B. Razavi, Design of CMOS Phase-Locked Loops: From Circuit Level to Architecture Level. Cambridge: Cambridge University Press, 2020.
-
-## To-do Tasks
-1. Design of buffers for output measurements.
-2. Routing the laid-out design in caravan.
