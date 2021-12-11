@@ -44,16 +44,16 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 
 |Parameters|Intended|Achieved (post-simulation)<sup>*</sup>|
 |------------------| -----|---------------------------|
-|Tuning Range (GHz)|3|2.36395|
+|Tuning Range (GHz)|1|0.63|
 |Center Frequency (GHz)|4|1.366025|
-|Area (mm<sup>2</sup>)|<0.01|0.004570|
+|Area (mm<sup>2</sup>)|<0.1|0.0208|
 |Supply Voltage|1.8|1.8|
 
 <sup>*</sup>Obtained after extracting parasitic capacitances and resistances
 
 ## Schematic Diagram
 **5-Stage NSO with Pre-Discharge (PD)**
-![Sch_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Schematic.png)
+![Sch_1](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/Schematic.jpg)
 
 ## Layout
 ![Layout_1](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/Layout.jpg)
@@ -62,7 +62,7 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 ## Simulation Results
 ### Pre-Layout
 #### Output Voltage
-![Out_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Out.png)
+![Out_1](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/PreLayout_Outputs.jpg)
 
 #### Oscillation Frequency vs Control Voltage
 ![Freq_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Freq.png)
