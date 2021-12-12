@@ -48,7 +48,7 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 |Area (mm<sup>2</sup>)|<0.1|-|0.0208|
 |Supply Voltage|1.8|1.8|-|
 
-<sup>*</sup>Obtained after extracting parasitic capacitances and resistances
+<sup>*</sup>Obtained after extracting parasitic capacitances
 
 ## Schematic Diagram
 **5-Stage NSO with Pre-Discharge (PD)**
