@@ -9,7 +9,6 @@ A high-performance, separately driven, noise cancelling, skew-based Voltage Cont
 6. Layout
 7. Simulation Results
 8. References
-9. To do tasks
 
 ## Block Diagram
 |**(a) A general skew based voltage controlled oscillator (VCO)**| **(b) A pre-charge discharge skew based delay cell**|
