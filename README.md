@@ -46,8 +46,8 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 |------------------| -----|---------------------------|-----------------------|
 |Tuning Range (GHz)|1|1.47|0.63|
 |Center Frequency (GHz)|2.5|2.235|1.625|
-|Area (mm<sup>2</sup>)|<0.1||0.0208|
-|Supply Voltage|1.8|1.8|
+|Area (mm<sup>2</sup>)|<0.1|-|0.0208|
+|Supply Voltage|1.8|1.8|-|
 
 <sup>*</sup>Obtained after extracting parasitic capacitances and resistances
 
