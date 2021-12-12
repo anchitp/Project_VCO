@@ -42,11 +42,11 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 
 ## Design Specifications
 
-|Parameters|Intended|Achieved (post-simulation)<sup>*</sup>|
-|------------------| -----|---------------------------|
-|Tuning Range (GHz)|1|0.63|
-|Center Frequency (GHz)|4|1.366025|
-|Area (mm<sup>2</sup>)|<0.1|0.0208|
+|Parameters|Intended|Achieved (pre-layout)|Achieved (post-layout)<sup>*</sup>|
+|------------------| -----|---------------------------|-----------------------|
+|Tuning Range (GHz)|1|1.47|0.63|
+|Center Frequency (GHz)|2.5|2.235|1.625|
+|Area (mm<sup>2</sup>)|<0.1||0.0208|
 |Supply Voltage|1.8|1.8|
 
 <sup>*</sup>Obtained after extracting parasitic capacitances and resistances
@@ -65,7 +65,7 @@ The proposed VCO architecture exhibits a fixed phase noise profile for a specifi
 ![Out_1](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/PreLayout_Outputs.jpg)
 
 #### Oscillation Frequency vs Control Voltage
-![Freq_1](https://github.com/anchitp/Project_VCO/blob/main/Plots/Pre_Layout_Freq.png)
+![Freq_1](https://github.com/anchitp/Project_VCO/blob/main/docs/plots/PreLayout_Linearity.jpg)
 
 ### Post-Layout
 #### Output Voltage
